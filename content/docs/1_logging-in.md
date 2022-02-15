@@ -20,7 +20,7 @@ alias tanzu='tanzu -n $DEV_NAMESPACE'
 Confirm success by fetching a list of apps (we won't see any since we're starting out).
 
 ```
-tanzu workload apps list
+tanzu apps workload list
 ```
 
 NOTE: For the remainder of this workshop, we will assume that you have this alias in place. All `kubectl` and `tanzu` commands will target your developer namespace.
