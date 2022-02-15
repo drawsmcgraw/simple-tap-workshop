@@ -1,4 +1,4 @@
-# Unpack The Demo App and cf push
+# Unpack The Demo App and Push
 
 ## Unpack
 Create a directory, named `workspace`. Place the demo app tarball in there and unpack it.
@@ -17,7 +17,24 @@ tanzu apps workload create tanzu-java-web-app \
   --label apps.tanzu.vmware.com/has-tests=true
 ```
 
-NOTE: The command is verbose for pedagogical reasons. During your day-to-day development, you will use a much shorter command involving a `workload.yaml` file.
+The command is verbose for pedagogical reasons. During your day-to-day development, you will use a much shorter command involving a `workload.yaml` file. That file will look something like the file below:
+
+```yaml
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: tanzu-java-web-app
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: tanzu-java-web-app
+spec:
+  source:
+    git:
+      url: https://github.com/sample-accelerators/tanzu-java-web-app
+      ref:
+        branch: main
+```
+
 
 Now tail the workload to see it get built and deployed:
 ```sh
@@ -32,19 +49,4 @@ Fetch the URL to your application with:
 tanzu apps workload get tanzu-java-web-app
 ```
 
-## Scale to Zero
-Because Cloud Native Runtime Service runs on top of Knative, your application, by default, will scale down to zero if it does not see any requests in a period of time. 
-
-You can observe this by tailing the logs and waiting for output similar to the following:
-
-```
-FILL IN THE BLANK
-```
-
-After this happens, reload the app. There will be a small 'warmup' period when the app comes back up and you can see the app coming back up in the logs you're tailing. After a short moment, the app will return a response. 
-
-It's worth noting that this behavior is only the default behavior and can be changed, if desired.
-
-
-## Next Steps
-That's pushing code from a local workstation. Next, we'll achieve the same results, but by updating our code in a git repo instead.
+Next, we'll look at how the platform can automatically scale your app to zero.

@@ -1,5 +1,7 @@
 # Logging In
 
+When using TAP, everything happens in a Kubernetes cluster. Specifically, all of your activity as a developer will happen in a Kubernetes namespace. Before moving on with the workshop, we'll need to confirm that you have access to your k8s namespace.
+
 There is a developer namespace set up for you on the Kubernetes cluster. After logging into your dev environment, you'll need to set the name of your developer namespace. After that, you can test connectivity.
 
 ```
