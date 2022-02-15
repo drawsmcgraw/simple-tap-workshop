@@ -11,4 +11,7 @@ This workshop is built to help you become familiar with the Tanzu Application Pl
 # Requirements
 In order to be successful, you will need the following:
 * An account on the platform.
-* The sample app to deploy (found [HERE](/docs/pkg/attendees-sample-app.tgz))
+* The sample app to deploy, found [HERE](/docs/pkg/hello-tap.tar.gz)
+* The Tanzu CLI, which can be downloaded [HERE](/docs/pkg/tanzu).
+
+Place the `tanzu` cli at the location `/usr/local/bin/.`
