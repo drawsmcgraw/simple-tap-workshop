@@ -5,7 +5,8 @@ type: docs
 
 # Overview
 
-This workshop is built to help you become familiar with using the Application Service. In this workshop, we'll work through topics like logging in, scaling, viewing logs, and high availability. At the end of this workshop, you should be comfortable with using `cf push` and navigating through the fundamental capabilities.
+This workshop is built to help you become familiar with the Tanzu Application Platform. In this workshop, we'll walk through the process of deploying an application from local source and a remote Git repo, tailing the logs of an application, and introduce you to a Supply Chain. At the end of this workshop, you should be comfortable with using some simple `tanzu` commands and navigating through the fundamental capabilities.
+
 
 # Requirements
 In order to be successful, you will need the following:
