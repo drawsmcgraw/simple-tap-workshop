@@ -25,7 +25,7 @@ tanzu apps workload tail tanzu-java-web-app --since 10m --timestamp
 ```
 
 ## Profit
-Congrats! You just built and deployed your first application! See below for example output and an explanation of what just happened.
+Congrats! You just built and deployed your first application! 
 
 Fetch the URL to your application with:
 ```sh

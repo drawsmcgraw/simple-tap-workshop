@@ -1,4 +1,4 @@
-# High Availability (HA)
+# Supply Chains
 
 Application Service has 4 levels of HA (High Availability) that keep your applications and the underlying platform running.
 1. App Instance

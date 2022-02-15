@@ -8,7 +8,7 @@ export DEV_NAMESPACE='your-namespace'
 kubectl -n $DEV_NAMESPACE get pods
 ```
 
-To save some typing, you can use an alias so that all kubectl commands use this namespace.
+To save some typing, you can use an alias so that all kubectl and tanzu commands use this namespace.
 
 ```
 alias kubectl='kubectl -n $DEV_NAMESPACE'
@@ -21,3 +21,4 @@ Confirm success by fetching a list of apps (we won't see any since we're startin
 tanzu workload apps list
 ```
 
+NOTE: For the remainder of this workshop, we will assume that you have this alias in place. All `kubectl` and `tanzu` commands will target your developer namespace.
