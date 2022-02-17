@@ -6,7 +6,7 @@ The pipeline we've been using has been running scans on the containers that get 
 
 There are some environment variables that need to be created. Copy/Paste the following:
 
-```
+```sh
 export METADATA_STORE_ACCESS_TOKEN=$(kubectl get secrets -n metadata-store -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='metadata-store-read-write-client')].data.token}" | base64 -d)
 
 export INGRESS_DOMAIN={{< param system_domain >}}
@@ -22,13 +22,13 @@ Note: `insight` is a CLI we'll use to query the security metadata store.
 
 Let's fetch an image scan:
 
-```
+```sh
 insight image get --digest $EXAMPLE_DIGEST --format json
 ```
 
 And we can also fetch a CVE scan. We can even grep through this output to quickly confirm/deny if we have any high level CVEs.
 
-```
+```sh
 insight image vulnerabilities --digest $EXAMPLE_DIGEST --format json
 ```
 

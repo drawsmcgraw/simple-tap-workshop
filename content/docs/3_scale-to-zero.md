@@ -3,7 +3,7 @@ Because Cloud Native Runtime Service runs on top of Knative, your application, b
 
 You can observe this by tailing the logs and waiting for output similar to the following:
 
-```
+```sh
 + tanzu-java-web-app-00001-deployment-788fc7b87-t4tmq › workload
 + tanzu-java-web-app-00001-deployment-788fc7b87-t4tmq › queue-proxy
 unexpected error: container "queue-proxy" in pod "tanzu-java-web-app-00001-deployment-788fc7b87-t4tmq" is waiting to start: ContainerCreating
