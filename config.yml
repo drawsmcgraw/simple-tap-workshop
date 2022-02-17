@@ -1,4 +1,4 @@
 params:
-  system_domain: pivotal.io
+  system_domain: tap.tanzu.tacticalprogramming.com
   harbor_url: harbor.tanzu.tacticalprogramming.com
   use_packaged_cli: true
